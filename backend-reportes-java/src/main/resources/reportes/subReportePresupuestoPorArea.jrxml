@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2b86807a-f1aa-4819-8294-4a5216630ab4">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CopyOfNew Data Adapter"/>
+	<queryString language="JSON">
+		<![CDATA[data.datos]]>
+	</queryString>
+	<field name="area" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="area"/>
+		<fieldDescription><![CDATA[area]]></fieldDescription>
+	</field>
+	<field name="tituloGastoCorriente" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="tituloGastoCorriente"/>
+		<fieldDescription><![CDATA[tituloGastoCorriente]]></fieldDescription>
+	</field>
+	<field name="gastoCorriente" class="java.math.BigDecimal">
+		<property name="net.sf.jasperreports.json.field.expression" value="gastoCorriente"/>
+		<fieldDescription><![CDATA[gastoCorriente]]></fieldDescription>
+	</field>
+	<field name="tituloInversion" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="tituloInversion"/>
+		<fieldDescription><![CDATA[tituloInversion]]></fieldDescription>
+	</field>
+	<field name="inversion" class="java.math.BigDecimal">
+		<property name="net.sf.jasperreports.json.field.expression" value="inversion"/>
+		<fieldDescription><![CDATA[inversion]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="559" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="250" width="541" height="281" uuid="12c51fbb-6f68-4007-abb9-8ade53c2830b"/>
+				<box>
+					<topPen lineWidth="0.1" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.1" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.1" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.1" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<pieChart>
+					<chart evaluationTime="Report">
+						<reportElement x="311" y="68" width="200" height="200" uuid="a503b51a-862b-427d-a5eb-62645a3eccf3"/>
+						<chartTitle/>
+						<chartSubtitle/>
+						<chartLegend/>
+					</chart>
+					<pieDataset maxCount="100" minPercentage="0.0">
+						<dataset resetType="Report"/>
+						<keyExpression><![CDATA[$F{area}]]></keyExpression>
+						<valueExpression><![CDATA[$F{inversion}]]></valueExpression>
+						<labelExpression><![CDATA[$F{area}]]></labelExpression>
+						<otherKeyExpression><![CDATA[]]></otherKeyExpression>
+						<otherLabelExpression><![CDATA[]]></otherLabelExpression>
+					</pieDataset>
+					<piePlot>
+						<plot/>
+						<itemLabel/>
+					</piePlot>
+				</pieChart>
+				<staticText>
+					<reportElement x="310" y="41" width="200" height="21" uuid="180b40bc-0e25-493a-be66-b630ca934a7c"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Inversión]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="2" y="0" width="538" height="240" uuid="8b16534d-779f-48f0-99c3-74217f793779"/>
+				<box>
+					<pen lineWidth="0.1"/>
+					<topPen lineWidth="0.1" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.1" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.1" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.1" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<barChart>
+					<chart evaluationTime="Report">
+						<reportElement x="8" y="31" width="530" height="200" backcolor="#FFFFFF" uuid="46fded4e-87b0-4f32-a83a-7c9ead1cde98"/>
+						<chartTitle/>
+						<chartSubtitle/>
+						<chartLegend/>
+					</chart>
+					<categoryDataset>
+						<dataset resetType="Report"/>
+						<categorySeries>
+							<seriesExpression><![CDATA["GASTO CORRIENTE"]]></seriesExpression>
+							<categoryExpression><![CDATA[$F{area}]]></categoryExpression>
+							<valueExpression><![CDATA[$F{gastoCorriente}]]></valueExpression>
+							<labelExpression><![CDATA[$F{tituloGastoCorriente}]]></labelExpression>
+						</categorySeries>
+						<categorySeries>
+							<seriesExpression><![CDATA["INVERSION"]]></seriesExpression>
+							<categoryExpression><![CDATA[$F{area}]]></categoryExpression>
+							<valueExpression><![CDATA[$F{inversion}]]></valueExpression>
+							<labelExpression><![CDATA[$F{tituloInversion}]]></labelExpression>
+						</categorySeries>
+					</categoryDataset>
+					<barPlot>
+						<plot/>
+						<itemLabel/>
+						<categoryAxisFormat>
+							<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+						</categoryAxisFormat>
+						<valueAxisFormat>
+							<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+						</valueAxisFormat>
+					</barPlot>
+				</barChart>
+			</frame>
+			<pieChart>
+				<chart evaluationTime="Report">
+					<reportElement x="30" y="317" width="200" height="200" uuid="47a07188-07e4-454f-93bd-a3cc9da7d1d5"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset maxCount="100" minPercentage="0.0">
+					<dataset resetType="Report"/>
+					<keyExpression><![CDATA[$F{area}]]></keyExpression>
+					<valueExpression><![CDATA[$F{gastoCorriente}]]></valueExpression>
+					<labelExpression><![CDATA[$F{area}]]></labelExpression>
+					<otherKeyExpression><![CDATA[]]></otherKeyExpression>
+					<otherLabelExpression><![CDATA[]]></otherLabelExpression>
+				</pieDataset>
+				<piePlot>
+					<plot/>
+					<itemLabel/>
+				</piePlot>
+			</pieChart>
+			<staticText>
+				<reportElement x="2" y="0" width="538" height="21" uuid="f0635167-3da7-4880-b4ab-c24463f483f5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cuadro comparativo de presupuestos por área]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="270" width="480" height="21" uuid="30e70a87-b4d4-41cd-b84e-70805d1dace1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cuadro comparativo de presupuestos por tipo de gasto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="290" width="200" height="21" uuid="e91bc694-e131-42f6-87d3-78e9a49fd94a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gasto Corriente]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

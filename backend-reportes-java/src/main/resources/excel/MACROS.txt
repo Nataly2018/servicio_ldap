@@ -1,0 +1,38 @@
+ALT + F11
+Sub CopiarHojaConFor()
+    Dim ws As Worksheet
+    Dim i As Integer
+    Dim nombreBase As String
+    nombreBase = "OP_TR" ' Nombre base para las nuevas hojas
+    
+    
+    
+    ' Luego, creamos 7 copias adicionales utilizando un bucle For
+    For i = 1 To 15
+    Set ws = ThisWorkbook.Sheets("TAREAS")
+    Dim indiceTareas As Integer
+    indiceTareas = ws.Index
+    
+    ws.Copy After:=ThisWorkbook.Sheets(indiceTareas)
+    Set wsCopiadas = ActiveSheet
+    wsCopiadas.Name = nombreBase & i
+    wsCopiadas.Visible = xlSheetHidden
+    Next i
+
+End Sub
+Sub EliminarCopias()
+    Dim ws As Worksheet
+    Dim i As Integer
+    Dim nombreBase As String
+    nombreBase = "OP_TR" ' Nombre base de las hojas copia
+    
+    ' Eliminamos las hojas copia una por una
+    For i = 1 To 15
+        On Error Resume Next ' Evita errores si la hoja no existe
+        Set ws = ThisWorkbook.Sheets(nombreBase & i)
+        If Not ws Is Nothing Then
+            ws.Delete
+        End If
+        On Error GoTo 0
+    Next i
+End Sub

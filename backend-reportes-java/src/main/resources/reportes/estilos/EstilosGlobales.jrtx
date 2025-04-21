@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio -->
+<jasperTemplate xmlns="http://jasperreports.sourceforge.net/jasperreports/template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/template http://jasperreports.sourceforge.net/xsd/jaspertemplate.xsd">
+	<style name="Celda" vTextAlign="Middle" fontName="SansSerif" fontSize="5">
+		<box leftPadding="5" rightPadding="5"/>
+	</style>
+	<style name="CeldaColumna" style="Celda" hTextAlign="Center" vTextAlign="Middle" isBold="false">
+		<box leftPadding="2" rightPadding="2">
+			<pen lineWidth="0.25"/>
+			<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+			<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+			<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+			<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="CeldaNumero" style="Celda" hTextAlign="Right" vTextAlign="Middle">
+		<box leftPadding="0" rightPadding="2"/>
+	</style>
+	<style name="CeldaNumeroBordeada" style="CeldaNumero">
+		<pen lineWidth="0.0"/>
+		<box leftPadding="0" rightPadding="2">
+			<pen lineWidth="0.25"/>
+			<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+			<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+			<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+			<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="CeldaBordeada" style="Celda">
+		<box>
+			<pen lineWidth="0.25"/>
+			<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+			<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+			<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+			<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Bordeado">
+		<box>
+			<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+			<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="TodoCentrado" hTextAlign="Center" vTextAlign="Middle"/>
+	<style name="TextoResumen" fontName="SansSerif" fontSize="8"/>
+	<style name="TextoTitulo" hTextAlign="Center" vTextAlign="Middle" fontName="SansSerif" fontSize="10" isBold="true"/>
+	<style name="TextoPiePagina" fontName="SansSerif" fontSize="8"/>
+	<style name="LetraChica" pattern="" fontName="SansSerif" fontSize="8"/>
+	<style name="TextoFirmaNombre" vTextAlign="Bottom" fontName="SansSerif" fontSize="8"/>
+	<style name="TextoEncabezado" fontName="SansSerif" fontSize="9"/>
+</jasperTemplate>

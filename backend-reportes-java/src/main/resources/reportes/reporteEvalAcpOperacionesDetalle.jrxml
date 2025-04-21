@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporteEvalAcpOperacionesDetalle" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="792" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6e43f3f4-217b-42e6-9c0d-0916058b677d">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JsonAcpEval"/>
+	<property name="com.jaspersoft.studio.unit." value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="cm"/>
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<style name="evEvaluacion">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evaluacion}.equals("INCUMPLIDO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#9A0909" backcolor="#FFC4C2" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evaluacion}.equals("SATISFACTORIO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#112C45" backcolor="#D2EAFF" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evaluacion}.equals("ACEPTABLE")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#206229" backcolor="#C7F1CD" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evaluacion}.equals("REZAGADO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#544806" backcolor="#F8F379" fill="Solid"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="path" class="java.lang.String" evaluationTime="Early">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString language="JSON">
+		<![CDATA[data.detalle.detalle]]>
+	</queryString>
+	<field name="codigoSecuencial" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="codigoSecuencial"/>
+		<fieldDescription><![CDATA[codigoSecuencial]]></fieldDescription>
+	</field>
+	<field name="operacionCodigo" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="operacionCodigo"/>
+		<fieldDescription><![CDATA[operacionCodigo]]></fieldDescription>
+	</field>
+	<field name="operacionDescripcion" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="operacionDescripcion"/>
+		<fieldDescription><![CDATA[operacionDescripcion]]></fieldDescription>
+	</field>
+	<field name="areaSigla" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="areaSigla"/>
+		<fieldDescription><![CDATA[areaSigla]]></fieldDescription>
+	</field>
+	<field name="eficaciaGestion" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="eficaciaGestion"/>
+		<fieldDescription><![CDATA[eficaciaGestion]]></fieldDescription>
+	</field>
+	<field name="evaluacion" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="evaluacion"/>
+		<fieldDescription><![CDATA[evaluacion]]></fieldDescription>
+	</field>
+	<field name="justificaciones" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="justificaciones"/>
+		<fieldDescription><![CDATA[justificaciones]]></fieldDescription>
+	</field>
+	<field name="accionesCorrectivas" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="accionesCorrectivas"/>
+		<fieldDescription><![CDATA[accionesCorrectivas]]></fieldDescription>
+	</field>
+	<field name="blnConJustificacion" class="java.lang.Boolean">
+		<property name="net.sf.jasperreports.json.field.expression" value="blnConJustificacion"/>
+		<fieldDescription><![CDATA[blnConJustificacion]]></fieldDescription>
+	</field>
+	<field name="blnConJustificacionMedidas" class="java.lang.Boolean">
+		<property name="net.sf.jasperreports.json.field.expression" value="blnConJustificacionMedidas"/>
+		<fieldDescription><![CDATA[blnConJustificacionMedidas]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="66">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement x="0" y="0" width="644" height="22" uuid="aa7573e8-ca21-4ac9-905d-34100efd4c12"/>
+				<textField textAdjust="StretchHeight">
+					<reportElement stretchType="ElementGroupHeight" x="0" y="0" width="40" height="22" isPrintWhenDetailOverflows="true" uuid="58309b38-f982-4ff2-bc13-852a1f9977d5">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="421ff37c-2d53-4059-b58e-ffac77d5a216"/>
+						<property name="com.jaspersoft.layout.grid.x" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="0.7"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+					</reportElement>
+					<box leftPadding="2" rightPadding="2">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{codigoSecuencial}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement stretchType="ElementGroupHeight" x="40" y="0" width="57" height="22" isPrintWhenDetailOverflows="true" uuid="c72052b5-81ed-4059-ac7b-c87fecd792f5">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="44125095-ae9c-422e-b631-7e53f373e601"/>
+						<property name="com.jaspersoft.layout.grid.x" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="0.7"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+					</reportElement>
+					<box leftPadding="2" rightPadding="2">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{operacionCodigo}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement stretchType="ElementGroupHeight" x="97" y="0" width="322" height="22" isPrintWhenDetailOverflows="true" uuid="5d7041d7-85e0-42f6-8da2-f48b579f5785">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e9ae0664-2d55-459a-86eb-e8506228347f"/>
+						<property name="com.jaspersoft.layout.grid.x" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="0.7"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+					</reportElement>
+					<box leftPadding="2" rightPadding="2">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{operacionDescripcion}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement stretchType="ElementGroupHeight" x="419" y="0" width="88" height="22" isPrintWhenDetailOverflows="true" uuid="be73d5c8-0a41-4202-873e-5f69994c0c31">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e9f4216a-1471-46ca-a3d3-e0d07e113cf6"/>
+						<property name="com.jaspersoft.layout.grid.x" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="0.7"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+					</reportElement>
+					<box leftPadding="2" rightPadding="2">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{areaSigla}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement stretchType="ElementGroupHeight" x="507" y="0" width="62" height="22" isPrintWhenDetailOverflows="true" uuid="af353130-ef3c-4158-a51f-d2e8c3edb18c">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8fb6c9f7-a0ef-4eef-89cc-4ea04f7d7221"/>
+						<property name="com.jaspersoft.layout.grid.x" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="0.7"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+					</reportElement>
+					<box leftPadding="2" rightPadding="2">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{eficaciaGestion}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement style="evEvaluacion" stretchType="ElementGroupHeight" x="569" y="0" width="75" height="22" isPrintWhenDetailOverflows="true" uuid="fd781e9f-4fd2-418c-9bb6-beda1283cd37">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="aee0ff42-0f67-428c-a521-e74fb6db359e"/>
+						<property name="com.jaspersoft.layout.grid.x" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="0.7"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+					</reportElement>
+					<box leftPadding="2" rightPadding="2">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{evaluacion}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="22" width="644" height="22" isRemoveLineWhenBlank="true" uuid="dd0a796e-5ba0-4a17-a743-3bc2d941969f">
+					<printWhenExpression><![CDATA[$F{blnConJustificacion}]]></printWhenExpression>
+				</reportElement>
+				<textField textAdjust="StretchHeight">
+					<reportElement stretchType="ContainerHeight" x="140" y="0" width="504" height="22" isPrintWhenDetailOverflows="true" uuid="2025218e-ec33-42c2-b160-74ff2aec67de">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="421ff37c-2d53-4059-b58e-ffac77d5a216"/>
+						<property name="com.jaspersoft.layout.grid.x" value="12"/>
+						<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="0.7"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+					</reportElement>
+					<box padding="2">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{justificaciones}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement stretchType="ContainerHeight" mode="Opaque" x="97" y="0" width="43" height="22" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" backcolor="#F0F0F0" uuid="9193e90d-5c84-40d8-98d7-767805fb9688">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="25719ba7-49c3-4625-874a-7887fc172128"/>
+						<property name="com.jaspersoft.layout.grid.x" value="11"/>
+						<property name="com.jaspersoft.layout.grid.y" value="0"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="0.7"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+					</reportElement>
+					<box leftPadding="2" rightPadding="2">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Justificación"]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="44" width="644" height="22" isRemoveLineWhenBlank="true" uuid="cbd5fd4f-b6b4-4f33-93e9-65620e1fbb15">
+					<printWhenExpression><![CDATA[$F{blnConJustificacionMedidas}]]></printWhenExpression>
+				</reportElement>
+				<textField textAdjust="StretchHeight">
+					<reportElement stretchType="ContainerHeight" x="140" y="0" width="504" height="22" isPrintWhenDetailOverflows="true" uuid="d9e1592d-7fb3-4547-8b0a-98d3962d82ea">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="421ff37c-2d53-4059-b58e-ffac77d5a216"/>
+						<property name="com.jaspersoft.layout.grid.x" value="12"/>
+						<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="0.7"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+					</reportElement>
+					<box padding="2">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Justified" verticalAlignment="Middle">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{accionesCorrectivas}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement stretchType="ContainerHeight" mode="Opaque" x="97" y="0" width="43" height="22" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" backcolor="#F0F0F0" uuid="63e073f3-e709-4dd8-a5b6-9af55877f3e4">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="25719ba7-49c3-4625-874a-7887fc172128"/>
+						<property name="com.jaspersoft.layout.grid.x" value="11"/>
+						<property name="com.jaspersoft.layout.grid.y" value="0"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="0.7"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+					</reportElement>
+					<box leftPadding="2" rightPadding="2">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Acciones Correctivas"]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporteGraficas" printOrder="Horizontal" pageWidth="612" pageHeight="792" columnWidth="580" leftMargin="18" rightMargin="14" topMargin="42" bottomMargin="14" isSummaryWithPageHeaderAndFooter="true" uuid="4442cd91-11ce-4eff-a79e-c0fe84d7f82e">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CopyOfNew Data Adapter"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="410"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="576"/>
+	<parameter name="JSON_INPUT_STREAM" class="java.io.InputStream" isForPrompting="false"/>
+	<parameter name="net.sf.jasperreports.json.source" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="net.sf.jasperreports.json.sources" class="java.util.List" isForPrompting="false"/>
+	<parameter name="net.sf.jasperreports.json.date.pattern" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="net.sf.jasperreports.json.number.pattern" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="JSON_LOCALE" class="java.util.Locale" isForPrompting="false"/>
+	<parameter name="net.sf.jasperreports.json.locale.code" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="JSON_TIME_ZONE" class="java.util.TimeZone" isForPrompting="false"/>
+	<parameter name="net.sf.jasperreports.json.timezone.id" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="path" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString language="JSON">
+		<![CDATA[data]]>
+	</queryString>
+	<field name="sistema" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="cabecera.sistema"/>
+		<fieldDescription><![CDATA[cabecera.sistema]]></fieldDescription>
+	</field>
+	<field name="versionPoa" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="cabecera.versionPoa"/>
+		<fieldDescription><![CDATA[cabecera.versionPoa]]></fieldDescription>
+	</field>
+	<field name="codigoReporte" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="cabecera.codigoReporte"/>
+		<fieldDescription><![CDATA[cabecera.codigoReporte]]></fieldDescription>
+	</field>
+	<field name="titulo" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="cabecera.titulo"/>
+		<fieldDescription><![CDATA[cabecera.titulo]]></fieldDescription>
+	</field>
+	<field name="subTitulo" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="cabecera.subTitulo"/>
+		<fieldDescription><![CDATA[cabecera.subTitulo]]></fieldDescription>
+	</field>
+	<field name="nombreUsuario" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="cabecera.nombreUsuario"/>
+		<fieldDescription><![CDATA[cabecera.nombreUsuario]]></fieldDescription>
+	</field>
+	<field name="fechaImpresion" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="cabecera.fechaImpresion"/>
+		<fieldDescription><![CDATA[cabecera.fechaImpresion]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="cabecera.descripcion"/>
+		<fieldDescription><![CDATA[cabecera.descripcion]]></fieldDescription>
+	</field>
+	<field name="datos" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="datos"/>
+		<fieldDescription><![CDATA[datos]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="93">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement x="10" y="1" width="562" height="57" uuid="42e9f8ef-b9a1-4405-ac92-65c2ecb17157"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Solid" lineColor="#030303"/>
+					<topPen lineWidth="0.1" lineStyle="Solid" lineColor="#030303"/>
+					<leftPen lineWidth="0.1" lineStyle="Solid" lineColor="#030303"/>
+					<bottomPen lineWidth="0.1" lineStyle="Solid" lineColor="#030303"/>
+					<rightPen lineWidth="0.1" lineStyle="Solid" lineColor="#030303"/>
+				</box>
+				<textField>
+					<reportElement x="81" y="0" width="369" height="21" uuid="8bfdf35a-649f-48f2-8f54-b327b0f2591c"/>
+					<textElement textAlignment="Center">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{titulo}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="81" y="21" width="369" height="18" uuid="02f10a0e-748e-4458-9d8c-d421e1c40dbc"/>
+					<textElement textAlignment="Center">
+						<font fontName="SansSerif" size="10"/>
+						<paragraph lineSpacingSize="2.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{subTitulo}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="480" y="33" width="82" height="12" uuid="71967ec8-e1b1-459b-abad-bdd95f0cc4cc">
+						<property name="com.jaspersoft.layout.grid.x" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.y" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.1" lineColor="#8A8A8A"/>
+						<topPen lineWidth="0.1" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.1" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.1" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.1" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{nombreUsuario}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="480" y="21" width="82" height="12" uuid="86ac90f2-3d1f-44be-95a1-26ff1dbdb474">
+						<property name="com.jaspersoft.layout.grid.x" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.y" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.1" lineColor="#8A8A8A"/>
+						<topPen lineWidth="0.1" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.1" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.1" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.1" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{sistema}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="480" y="45" width="82" height="12" uuid="533ec368-13fa-464c-8506-0ba6d2930045">
+						<property name="com.jaspersoft.layout.grid.x" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.y" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.1" lineColor="#8A8A8A"/>
+						<topPen lineWidth="0.1" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.1" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.1" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.1" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="7"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fechaImpresion}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Opaque" x="450" y="0" width="112" height="21" forecolor="#030303" uuid="c7a4ddb6-46b9-47d4-a550-14dad1c08ec3">
+						<property name="com.jaspersoft.layout.grid.x" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.y" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+					</reportElement>
+					<box>
+						<pen lineColor="#030303"/>
+						<topPen lineWidth="0.1" lineStyle="Solid" lineColor="#030303"/>
+						<leftPen lineWidth="0.1" lineStyle="Solid" lineColor="#030303"/>
+						<bottomPen lineWidth="0.1" lineStyle="Solid" lineColor="#030303"/>
+						<rightPen lineWidth="0.1" lineStyle="Solid" lineColor="#030303"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{codigoReporte}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="450" y="21" width="30" height="12" uuid="d5460efa-27d8-4dbd-92d0-e5b21c726d4f">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.1" lineStyle="Solid" lineColor="#808080"/>
+						<topPen lineWidth="0.1" lineStyle="Solid" lineColor="#808080"/>
+						<leftPen lineWidth="0.1" lineStyle="Solid" lineColor="#808080"/>
+						<bottomPen lineWidth="0.1" lineStyle="Solid" lineColor="#808080"/>
+						<rightPen lineWidth="0.1" lineStyle="Solid" lineColor="#808080"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[ Sistema]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="450" y="33" width="30" height="12" uuid="766ed183-96b5-4e00-9e3f-8d462feddc18">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.1" lineColor="#808080"/>
+						<topPen lineWidth="0.1" lineStyle="Solid" lineColor="#808080"/>
+						<leftPen lineWidth="0.1" lineStyle="Solid" lineColor="#808080"/>
+						<bottomPen lineWidth="0.1" lineStyle="Solid" lineColor="#808080"/>
+						<rightPen lineWidth="0.1" lineStyle="Solid" lineColor="#808080"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[ Usuario]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="450" y="45" width="30" height="12" uuid="5f516ef5-4971-471a-8475-17595a5d2efe">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.1" lineColor="#808080"/>
+						<topPen lineWidth="0.1" lineStyle="Solid" lineColor="#808080"/>
+						<leftPen lineWidth="0.1" lineStyle="Solid" lineColor="#808080"/>
+						<bottomPen lineWidth="0.1" lineStyle="Solid" lineColor="#808080"/>
+						<rightPen lineWidth="0.1" lineStyle="Solid" lineColor="#808080"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="7"/>
+					</textElement>
+					<text><![CDATA[ Fecha]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="81" y="39" width="369" height="18" uuid="cee37038-b1b2-45bd-8918-d63254bf5a28"/>
+					<textElement textAlignment="Center">
+						<font fontName="SansSerif" size="9"/>
+						<paragraph lineSpacingSize="2.0"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{versionPoa}]]></textFieldExpression>
+				</textField>
+				<image>
+					<reportElement x="15" y="5" width="50" height="50" uuid="e13eb387-6784-44de-9487-53cbdbd407fb"/>
+					<imageExpression><![CDATA[$P{path} + "imagenes/ypfb-logo.jpg"]]></imageExpression>
+				</image>
+			</frame>
+			<textField>
+				<reportElement x="10" y="62" width="562" height="30" uuid="7ee7a00c-a535-4d89-bb36-d9ed38fbb5de"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="218" splitType="Immediate">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.spreadsheet.SpreadsheetLayout"/>
+			<subreport>
+				<reportElement x="0" y="0" width="200" height="218" uuid="899dc5a3-2c94-439b-a9bf-fdf2243b51b0"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("datos")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{path} + "subReportePresupuestoPorArea.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,31 @@
+{
+	"success": true,
+	"code": 200,
+	"message": "Operación Exitosa",
+	"data": {
+		"sistema": "SIPOA",
+		"versionPoa": "Version 1.0.0",
+		"codigoReporte": "RPT-NOVA-001",
+		"titulo": "CANTIDAD DE OPERACIONES POR ACCION A CORTO PLAZO",
+		"subTitulo": "PLAN OPERATIVO ANUAL 2024",
+		"nombreUsuario": "Rene Omar Vargas Atienne",
+		"fechaImpresion": "21/09/2023",
+		"descripcion": "En el siguiente reporte se visualizan los totales presupuestados para gasto corriente e inversión, de las areas GTIC y PRS",
+		"datos": [
+			{
+				"area": "GTIC",
+				"tituloGastoCorriente": "GastoCorriente",
+				"gastoCorriente": 80,
+				"tituloInversion": "Inversion",
+				"inversion": 10
+			},
+			{
+				"area": "PRS",
+				"tituloGastoCorriente": "GastoCorriente",
+				"gastoCorriente": 90,
+				"tituloInversion": "Inversion",
+				"inversion": 60
+			}
+		]
+	}
+}

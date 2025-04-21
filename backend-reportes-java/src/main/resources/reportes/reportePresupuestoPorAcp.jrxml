@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporteGraficas" printOrder="Horizontal" pageWidth="612" pageHeight="792" columnWidth="552" leftMargin="30" rightMargin="30" topMargin="42" bottomMargin="14" isSummaryWithPageHeaderAndFooter="true" uuid="4442cd91-11ce-4eff-a79e-c0fe84d7f82e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CopyOfNew Data Adapter"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="410"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="576"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="JSON_INPUT_STREAM" class="java.io.InputStream" isForPrompting="false"/>
+	<parameter name="net.sf.jasperreports.json.source" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="net.sf.jasperreports.json.sources" class="java.util.List" isForPrompting="false"/>
+	<parameter name="net.sf.jasperreports.json.date.pattern" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="net.sf.jasperreports.json.number.pattern" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="JSON_LOCALE" class="java.util.Locale" isForPrompting="false"/>
+	<parameter name="net.sf.jasperreports.json.locale.code" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="JSON_TIME_ZONE" class="java.util.TimeZone" isForPrompting="false"/>
+	<parameter name="net.sf.jasperreports.json.timezone.id" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="path" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString language="JSON">
+		<![CDATA[data]]>
+	</queryString>
+	<field name="datos" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="datos"/>
+		<fieldDescription><![CDATA[datos]]></fieldDescription>
+	</field>
+	<title>
+		<band height="57">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<subreport>
+				<reportElement x="70" y="0" width="470" height="57" uuid="b6424214-fb46-4765-ae88-4234915c1e68"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("cabecera")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{path} + "cabecera.jasper"]]></subreportExpression>
+			</subreport>
+			<frame>
+				<reportElement x="10" y="0" width="60" height="57" uuid="477737e9-869f-490e-bb16-e6d5440b6650"/>
+				<box>
+					<pen lineWidth="0.1" lineColor="#030303"/>
+					<topPen lineWidth="0.1" lineStyle="Solid" lineColor="#030303"/>
+					<leftPen lineWidth="0.1" lineStyle="Solid" lineColor="#030303"/>
+					<bottomPen lineWidth="0.1" lineStyle="Solid" lineColor="#030303"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="rgba(3, 3, 3, 0.0)"/>
+				</box>
+				<image>
+					<reportElement x="6" y="3" width="50" height="50" uuid="f860c25a-57f1-4733-85e6-d8ba46b06d0c"/>
+					<imageExpression><![CDATA[$P{path} + "imagenes/ypfb-logo.jpg"]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</title>
+	<summary>
+		<band height="219">
+			<subreport>
+				<reportElement x="10" y="10" width="529" height="207" uuid="436cf0ac-f14d-4a7c-85c1-e2afef37951c"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("datos")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{path} + "subReportePresupuestoPorAcp.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>

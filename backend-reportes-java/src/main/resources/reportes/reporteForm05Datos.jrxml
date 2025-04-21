@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporteForm05Datos" pageWidth="614" pageHeight="612" orientation="Landscape" columnWidth="614" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6e43f3f4-217b-42e6-9c0d-0916058b677d">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JsonFormulario5"/>
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<property name="com.jaspersoft.studio.unit." value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="cm"/>
+	<style name="evEnero">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evEnero}.equals("INCUMPLIDO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#9A0909" backcolor="#FFC4C2" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evEnero}.equals("SATISFACTORIO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#112C45" backcolor="#D2EAFF" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evEnero}.equals("ACEPTABLE")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#206229" backcolor="#C7F1CD" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evEnero}.equals("REZAGADO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#544806" backcolor="#F8F379" fill="Solid"/>
+		</conditionalStyle>
+	</style>
+	<style name="evFebrero">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evFebrero}.equals("INCUMPLIDO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#9A0909" backcolor="#FFC4C2" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evFebrero}.equals("SATISFACTORIO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#112C45" backcolor="#D2EAFF" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evFebrero}.equals("ACEPTABLE")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#206229" backcolor="#C7F1CD" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evFebrero}.equals("REZAGADO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#544806" backcolor="#F8F379" fill="Solid"/>
+		</conditionalStyle>
+	</style>
+	<style name="evMarzo">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evMarzo}.equals("INCUMPLIDO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#9A0909" backcolor="#FFC4C2" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evMarzo}.equals("SATISFACTORIO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#112C45" backcolor="#D2EAFF" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evMarzo}.equals("ACEPTABLE")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#206229" backcolor="#C7F1CD" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evMarzo}.equals("REZAGADO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#544806" backcolor="#F8F379" fill="Solid"/>
+		</conditionalStyle>
+	</style>
+	<style name="evAbril">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evAbril}.equals("INCUMPLIDO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#9A0909" backcolor="#FFC4C2" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evAbril}.equals("SATISFACTORIO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#112C45" backcolor="#D2EAFF" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evAbril}.equals("ACEPTABLE")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#206229" backcolor="#C7F1CD" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evAbril}.equals("REZAGADO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#544806" backcolor="#F8F379" fill="Solid"/>
+		</conditionalStyle>
+	</style>
+	<style name="evMayo">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evMayo}.equals("INCUMPLIDO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#9A0909" backcolor="#FFC4C2" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evMayo}.equals("SATISFACTORIO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#112C45" backcolor="#D2EAFF" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evMayo}.equals("ACEPTABLE")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#206229" backcolor="#C7F1CD" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evMayo}.equals("REZAGADO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#544806" backcolor="#F8F379" fill="Solid"/>
+		</conditionalStyle>
+	</style>
+	<style name="evJunio">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evJunio}.equals("INCUMPLIDO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#9A0909" backcolor="#FFC4C2" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evJunio}.equals("SATISFACTORIO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#112C45" backcolor="#D2EAFF" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evJunio}.equals("ACEPTABLE")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#206229" backcolor="#C7F1CD" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evJunio}.equals("REZAGADO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#544806" backcolor="#F8F379" fill="Solid"/>
+		</conditionalStyle>
+	</style>
+	<style name="evJulio">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evJulio}.equals("INCUMPLIDO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#9A0909" backcolor="#FFC4C2" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evJulio}.equals("SATISFACTORIO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#112C45" backcolor="#D2EAFF" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evJulio}.equals("ACEPTABLE")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#206229" backcolor="#C7F1CD" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evJulio}.equals("REZAGADO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#544806" backcolor="#F8F379" fill="Solid"/>
+		</conditionalStyle>
+	</style>
+	<style name="evAgosto">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evAgosto}.equals("INCUMPLIDO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#9A0909" backcolor="#FFC4C2" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evAgosto}.equals("SATISFACTORIO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#112C45" backcolor="#D2EAFF" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evAgosto}.equals("ACEPTABLE")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#206229" backcolor="#C7F1CD" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evAgosto}.equals("REZAGADO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#544806" backcolor="#F8F379" fill="Solid"/>
+		</conditionalStyle>
+	</style>
+	<style name="evSeptiembre">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evSeptiembre}.equals("INCUMPLIDO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#9A0909" backcolor="#FFC4C2" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evSeptiembre}.equals("SATISFACTORIO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#112C45" backcolor="#D2EAFF" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evSeptiembre}.equals("ACEPTABLE")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#206229" backcolor="#C7F1CD" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evSeptiembre}.equals("REZAGADO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#544806" backcolor="#F8F379" fill="Solid"/>
+		</conditionalStyle>
+	</style>
+	<style name="evOctubre">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evOctubre}.equals("INCUMPLIDO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#9A0909" backcolor="#FFC4C2" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evOctubre}.equals("SATISFACTORIO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#112C45" backcolor="#D2EAFF" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evOctubre}.equals("ACEPTABLE")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#206229" backcolor="#C7F1CD" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evOctubre}.equals("REZAGADO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#544806" backcolor="#F8F379" fill="Solid"/>
+		</conditionalStyle>
+	</style>
+	<style name="evNoviembre">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evNoviembre}.equals("INCUMPLIDO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#9A0909" backcolor="#FFC4C2" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evNoviembre}.equals("SATISFACTORIO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#112C45" backcolor="#D2EAFF" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evNoviembre}.equals("ACEPTABLE")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#206229" backcolor="#C7F1CD" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evNoviembre}.equals("REZAGADO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#544806" backcolor="#F8F379" fill="Solid"/>
+		</conditionalStyle>
+	</style>
+	<style name="evDiciembre">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evDiciembre}.equals("INCUMPLIDO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#9A0909" backcolor="#FFC4C2" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evDiciembre}.equals("SATISFACTORIO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#112C45" backcolor="#D2EAFF" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evDiciembre}.equals("ACEPTABLE")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#206229" backcolor="#C7F1CD" fill="Solid"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{evDiciembre}.equals("REZAGADO")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#544806" backcolor="#F8F379" fill="Solid"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="path" class="java.lang.String" evaluationTime="Early">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString language="JSON">
+		<![CDATA[data.detalle.detalle.detalle.detalle]]>
+	</queryString>
+	<field name="meta" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="meta"/>
+		<fieldDescription><![CDATA[meta]]></fieldDescription>
+	</field>
+	<field name="tipo" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="tipo"/>
+		<fieldDescription><![CDATA[tipo]]></fieldDescription>
+	</field>
+	<field name="enero" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="enero"/>
+		<fieldDescription><![CDATA[enero]]></fieldDescription>
+	</field>
+	<field name="febrero" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="febrero"/>
+		<fieldDescription><![CDATA[febrero]]></fieldDescription>
+	</field>
+	<field name="marzo" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="marzo"/>
+		<fieldDescription><![CDATA[marzo]]></fieldDescription>
+	</field>
+	<field name="abril" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="abril"/>
+		<fieldDescription><![CDATA[abril]]></fieldDescription>
+	</field>
+	<field name="mayo" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="mayo"/>
+		<fieldDescription><![CDATA[mayo]]></fieldDescription>
+	</field>
+	<field name="junio" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="junio"/>
+		<fieldDescription><![CDATA[junio]]></fieldDescription>
+	</field>
+	<field name="julio" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="julio"/>
+		<fieldDescription><![CDATA[julio]]></fieldDescription>
+	</field>
+	<field name="agosto" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="agosto"/>
+		<fieldDescription><![CDATA[agosto]]></fieldDescription>
+	</field>
+	<field name="septiembre" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="septiembre"/>
+		<fieldDescription><![CDATA[septiembre]]></fieldDescription>
+	</field>
+	<field name="octubre" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="octubre"/>
+		<fieldDescription><![CDATA[octubre]]></fieldDescription>
+	</field>
+	<field name="noviembre" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="noviembre"/>
+		<fieldDescription><![CDATA[noviembre]]></fieldDescription>
+	</field>
+	<field name="diciembre" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="diciembre"/>
+		<fieldDescription><![CDATA[diciembre]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="19" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+			<frame>
+				<reportElement positionType="Float" x="0" y="0" width="614" height="19" uuid="6be0c038-2dde-4202-b8c1-15c91b237f87"/>
+				<textField textAdjust="StretchHeight">
+					<reportElement stretchType="ContainerHeight" mode="Transparent" x="0" y="0" width="36" height="19" isPrintWhenDetailOverflows="true" uuid="dd92e69a-06bc-4bdf-812d-7e592806b911">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="421ff37c-2d53-4059-b58e-ffac77d5a216"/>
+						<property name="com.jaspersoft.layout.grid.x" value="12"/>
+						<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="0.7"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+					</reportElement>
+					<box padding="2">
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+						<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{meta}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement stretchType="ContainerHeight" mode="Transparent" x="150" y="0" width="32" height="19" isPrintWhenDetailOverflows="true" backcolor="#FFFFFF" uuid="352ec85d-59d6-4f03-8a40-df1a9d6b61b7">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="421ff37c-2d53-4059-b58e-ffac77d5a216"/>
+						<property name="com.jaspersoft.layout.grid.x" value="12"/>
+						<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="0.7"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+						<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+						<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					</reportElement>
+					<box padding="2">
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+						<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tipo}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="ScaleFont">
+					<reportElement stretchType="ContainerHeight" mode="Transparent" x="182" y="0" width="36" height="19" isPrintWhenDetailOverflows="true" uuid="710d67f1-13d0-4072-a2c7-edb938d7265c">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="421ff37c-2d53-4059-b58e-ffac77d5a216"/>
+						<property name="com.jaspersoft.layout.grid.x" value="12"/>
+						<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="0.7"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					</reportElement>
+					<box padding="2">
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+						<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{enero}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement stretchType="ContainerHeight" mode="Transparent" x="218" y="0" width="36" height="19" isPrintWhenDetailOverflows="true" uuid="8cf21c62-0292-4060-a7eb-a4d88b0ff475">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="421ff37c-2d53-4059-b58e-ffac77d5a216"/>
+						<property name="com.jaspersoft.layout.grid.x" value="12"/>
+						<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="0.7"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					</reportElement>
+					<box padding="2">
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+						<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{febrero}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement stretchType="ContainerHeight" mode="Transparent" x="254" y="0" width="36" height="19" isPrintWhenDetailOverflows="true" uuid="1d1c2bea-e4d8-44dd-b0c7-1825b8708709">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="421ff37c-2d53-4059-b58e-ffac77d5a216"/>
+						<property name="com.jaspersoft.layout.grid.x" value="12"/>
+						<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="0.7"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					</reportElement>
+					<box padding="2">
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+						<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{marzo}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement stretchType="ContainerHeight" mode="Transparent" x="290" y="0" width="36" height="19" isPrintWhenDetailOverflows="true" uuid="3596ce43-ba1f-4204-ac30-05d95562398b">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="421ff37c-2d53-4059-b58e-ffac77d5a216"/>
+						<property name="com.jaspersoft.layout.grid.x" value="12"/>
+						<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="0.7"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					</reportElement>
+					<box padding="2">
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+						<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{abril}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement stretchType="ContainerHeight" mode="Transparent" x="362" y="0" width="36" height="19" isPrintWhenDetailOverflows="true" uuid="f115cae5-85b1-4997-a356-a1a164b369ce">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="421ff37c-2d53-4059-b58e-ffac77d5a216"/>
+						<property name="com.jaspersoft.layout.grid.x" value="12"/>
+						<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="0.7"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					</reportElement>
+					<box padding="2">
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+						<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{junio}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement stretchType="ContainerHeight" mode="Transparent" x="398" y="0" width="36" height="19" isPrintWhenDetailOverflows="true" uuid="c9bb1e9b-5c89-4832-8d0f-ab5044ec5164">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="421ff37c-2d53-4059-b58e-ffac77d5a216"/>
+						<property name="com.jaspersoft.layout.grid.x" value="12"/>
+						<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="0.7"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					</reportElement>
+					<box padding="2">
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+						<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{julio}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement stretchType="ContainerHeight" mode="Transparent" x="434" y="0" width="36" height="19" isPrintWhenDetailOverflows="true" uuid="68f1ea69-6b37-48c0-9c7d-ac019fb02c2f">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="421ff37c-2d53-4059-b58e-ffac77d5a216"/>
+						<property name="com.jaspersoft.layout.grid.x" value="12"/>
+						<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="0.7"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					</reportElement>
+					<box padding="2">
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+						<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{agosto}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement stretchType="ContainerHeight" mode="Transparent" x="326" y="0" width="36" height="19" isPrintWhenDetailOverflows="true" uuid="64184d78-eb55-4355-a66c-5c8b465a5db9">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="421ff37c-2d53-4059-b58e-ffac77d5a216"/>
+						<property name="com.jaspersoft.layout.grid.x" value="12"/>
+						<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="0.7"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+						<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+					</reportElement>
+					<box padding="2">
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+						<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{mayo}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement stretchType="ContainerHeight" mode="Transparent" x="542" y="0" width="36" height="19" isPrintWhenDetailOverflows="true" uuid="8c91ffc4-9a62-4e96-9e0a-ae8f283691e6">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="421ff37c-2d53-4059-b58e-ffac77d5a216"/>
+						<property name="com.jaspersoft.layout.grid.x" value="12"/>
+						<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="0.7"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					</reportElement>
+					<box padding="2">
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+						<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{noviembre}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement stretchType="ContainerHeight" mode="Transparent" x="506" y="0" width="36" height="19" isPrintWhenDetailOverflows="true" uuid="fcfcc158-1e22-4ad0-91e4-81dd5262feaa">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="421ff37c-2d53-4059-b58e-ffac77d5a216"/>
+						<property name="com.jaspersoft.layout.grid.x" value="12"/>
+						<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="0.7"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					</reportElement>
+					<box padding="2">
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+						<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{octubre}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement stretchType="ContainerHeight" mode="Transparent" x="470" y="0" width="36" height="19" isPrintWhenDetailOverflows="true" uuid="57b6c85b-af05-46e6-b15c-acc9c61245a4">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="421ff37c-2d53-4059-b58e-ffac77d5a216"/>
+						<property name="com.jaspersoft.layout.grid.x" value="12"/>
+						<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="0.7"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+						<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+					</reportElement>
+					<box padding="2">
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+						<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{septiembre}]]></textFieldExpression>
+				</textField>
+				<textField textAdjust="StretchHeight">
+					<reportElement stretchType="ContainerHeight" mode="Transparent" x="578" y="0" width="36" height="19" isPrintWhenDetailOverflows="true" backcolor="#BD4D4B" uuid="b98df63d-c23a-4681-a018-98090eeebb33">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="421ff37c-2d53-4059-b58e-ffac77d5a216"/>
+						<property name="com.jaspersoft.layout.grid.x" value="12"/>
+						<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+						<property name="com.jaspersoft.layout.grid.weight.x" value="0.7"/>
+						<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+						<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+						<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+						<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					</reportElement>
+					<box padding="2">
+						<pen lineWidth="0.25" lineStyle="Solid"/>
+						<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{diciembre}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>
