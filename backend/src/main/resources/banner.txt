@@ -1,0 +1,4 @@
+
+Ver. 1.0.0
+${application.title} ${application.version}
+Powered by Spring Boot ${spring-boot.version}

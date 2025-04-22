@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "config.app",
+      "type": "gob.mefp.reportes.config.AppProperties",
+      "sourceType": "gob.mefp.reportes.config.AppProperties"
+    },
+    {
+      "name": "hmac.key",
+      "type": "gob.mefp.reportes.security.properties.HMACKeyConfigProperties",
+      "sourceType": "gob.mefp.reportes.security.properties.HMACKeyConfigProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "config.app.aplicacion-debug",
+      "type": "java.lang.Boolean",
+      "sourceType": "gob.mefp.reportes.config.AppProperties"
+    },
+    {
+      "name": "hmac.key.secret-key",
+      "type": "java.lang.String",
+      "sourceType": "gob.mefp.reportes.security.properties.HMACKeyConfigProperties"
+    }
+  ],
+  "hints": []
+}

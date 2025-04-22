@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt001_parametricas" pageWidth="612" pageHeight="792" columnWidth="610" leftMargin="0" rightMargin="2" topMargin="25" bottomMargin="0" uuid="713fb7eb-45c6-411d-93a4-325d477501e3">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="servicio_rest"/>
+	<property name="ireport.jasperserver.url" value="http://172.20.253.117:9090/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.reportUnit" value="/reports/POAI_V2_PROD/formulacion/rpt_poai"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="ireport.jasperserver.report.resource" value="/reports/POAI_V2_PROD/formulacion/rpt_poai_files/Main_Jrxml"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="665"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="325"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="244"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="749"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="path" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString language="JSON">
+		<![CDATA[data]]>
+	</queryString>
+	<field name="cabecera" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="cabecera"/>
+		<fieldDescription><![CDATA[cabecera]]></fieldDescription>
+	</field>
+	<field name="datos" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="datos"/>
+		<fieldDescription><![CDATA[datos]]></fieldDescription>
+	</field>
+	<background>
+		<band height="767">
+			<textField textAdjust="StretchHeight" evaluationTime="Report">
+				<reportElement x="557" y="747" width="28" height="20" uuid="3e738d8a-1409-4fab-a799-8028d442354d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" de  " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="489" y="747" width="68" height="20" uuid="54db65be-e523-48d7-aa8a-f0276e0021e2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Pagina " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</background>
+	<title>
+		<band height="79">
+			<subreport>
+				<reportElement x="200" y="0" width="380" height="64" uuid="9fb19c0b-d12e-4a7c-bbe2-183a41b6ba39">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("cabecera")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{path} +"cabecera.jasper"]]></subreportExpression>
+			</subreport>
+			<image>
+				<reportElement x="30" y="9" width="160" height="50" uuid="40b9a994-b26a-4642-ba41-7d583a869d8a"/>
+				<imageExpression><![CDATA[$P{path} + "largo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="40">
+			<subreport>
+				<reportElement x="30" y="0" width="550" height="40" uuid="621055db-14c6-4faa-ac97-aea3048bf903"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("datos")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{path} + "subrpt001_lista_parametricas.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</pageFooter>
+</jasperReport>

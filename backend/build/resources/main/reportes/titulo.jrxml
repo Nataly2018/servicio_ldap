@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="titulo" pageWidth="562" pageHeight="792" columnWidth="506" leftMargin="28" rightMargin="28" topMargin="0" bottomMargin="0" uuid="713fb7eb-45c6-411d-93a4-325d477501e3">
+	<property name="ireport.jasperserver.url" value="http://172.20.253.117:9090/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="ireport.jasperserver.report.resource" value="/Common/titulo.jrxml"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="162"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="827"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="servicio_rest"/>
+	<parameter name="path" class="java.lang.String">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString language="jsonql">
+		<![CDATA[data.cabecera]]>
+	</queryString>
+	<field name="nombreUnidad" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="nombreUnidad"/>
+		<fieldDescription><![CDATA[nombreUnidad]]></fieldDescription>
+	</field>
+	<field name="nombreSistema" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="nombreSistema"/>
+		<fieldDescription><![CDATA[nombreSistema]]></fieldDescription>
+	</field>
+	<field name="codigoReporte" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="codigoReporte"/>
+		<fieldDescription><![CDATA[codigoReporte]]></fieldDescription>
+	</field>
+	<field name="tituloReporte" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="tituloReporte"/>
+		<fieldDescription><![CDATA[tituloReporte]]></fieldDescription>
+	</field>
+	<field name="usuario" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="usuario"/>
+		<fieldDescription><![CDATA[usuario]]></fieldDescription>
+	</field>
+	<field name="fechaImpresion" class="java.lang.String">
+		<property name="net.sf.jasperreports.jsonql.field.expression" value="fechaImpresion"/>
+		<fieldDescription><![CDATA[fechaImpresion]]></fieldDescription>
+	</field>
+	<title>
+		<band height="79">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="-25" y="8" width="200" height="10" uuid="c8b0861c-cf09-40cb-912d-d763166ed4c0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreUnidad}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="-25" y="18" width="200" height="10" uuid="a60ec59b-72de-4f4a-a960-c95aec47763b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreSistema}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="-25" y="28" width="200" height="10" uuid="dbfac8ee-92d3-496d-868e-cfa05c73eddd"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Reporte "+$F{codigoReporte}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-25" y="1" width="384" height="1" forecolor="#4574C4" uuid="70f24f4e-e9e5-4816-a138-d9b1642d2a29">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="2.45"/>
+				</graphicElement>
+			</line>
+			<ellipse>
+				<reportElement mode="Opaque" x="175" y="3" width="60" height="60" forecolor="#629FC4" backcolor="#BBD6ED" uuid="5df37eda-e35b-43bc-b805-157ad09f165c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</ellipse>
+			<rectangle>
+				<reportElement mode="Opaque" x="205" y="3" width="154" height="60" forecolor="#629FC4" backcolor="#BBD6ED" uuid="f2fdac03-689d-416b-88c7-fff8b401f739"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="204" y="3" width="154" height="60" uuid="76b70500-9187-4184-8d00-8102c477aa24">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tituloReporte}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-26" y="63" width="383" height="1" forecolor="#4574C4" uuid="d59b9f09-cfc7-4092-9367-76890daaf1dd">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+</jasperReport>
